@@ -8,7 +8,7 @@
     "scripts": {
         "build": "webpack",
         "start": "webpack --watch & live-server --port=8085",
-        "test": "mocha -r ts-node/register src/**/*_test.ts"
+        "test": "mocha -r ts-node/register 'src/**/*_test.ts'"
     },
     "dependencies": {
         "@types/mocha": "^5.2.7",
