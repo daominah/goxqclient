@@ -3,8 +3,8 @@ const WIDTH = 3;
 const HEIGHT = 4;
 
 type Team = number & { _type: "Team" };
-const WHITE = 1 as Team;
-const BLACK = -1 as Team;
+export const WHITE = 1 as Team;
+export const BLACK = -1 as Team;
 
 type Piece = number & { _type: "Piece" };
 const PAWN     = 1 as Piece;

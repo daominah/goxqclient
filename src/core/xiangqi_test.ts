@@ -1,27 +1,28 @@
-import * as rewire from 'rewire';
+import * as rewire from "rewire";
+import * as assert from "assert";
 
-const xq = rewire('./xiangqi');
+const xq = rewire("./xiangqi");
 
-describe('TestXiangqiAdd', function () {
-    it('', function () {
+describe("TestXiangqiAdd", function () {
+    it("", function () {
         let result = 5 + 2;
-        expect(result).toBe(7);
+        assert.equal(result, 7);
     });
 });
 
-describe('TestXiangqiSub', function () {
-    it('', function () {
+describe("TestXiangqiSub", function () {
+    it("", function () {
         let result = 1 - 2;
-        expect(result).toBe(-1);
+        assert.equal(result, -1);
     });
 });
 
-describe('TestXiangqiOtherTeam', function () {
-    it('', function () {
-        let result = OtherTeam(WHITE);
-        expect(result).toBe(BLACK);
+describe("TestXiangqiOtherTeam", function () {
+    it("", function () {
+        let result = xq.__get__("OtherTeam")(xq.WHITE);
+        assert.equal(result, xq.BLACK);
 
-        result = OtherTeam(BLACK);
-        expect(result).toBe(WHITE);
+        result = xq.__get__("OtherTeam")(xq.BLACK);
+        assert.equal(result, xq.WHITE);
     });
 });
